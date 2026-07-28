@@ -6,6 +6,7 @@ import { User, Briefcase, Code, Mail, Download, Menu, X, ArrowDown } from "lucid
 import { useState } from "react";
 import LineSidebar from "./LineSidebar";
 import TextType from "./TextType";
+import { AnimatedThemeToggler } from "@/registry/magicui/animated-theme-toggler";
 
 export default function Sidebar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,9 +21,12 @@ export default function Sidebar() {
           </div>
           <span className="font-mono text-accent font-bold">Radith Akram</span>
         </div>
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center space-x-3">
+          <AnimatedThemeToggler />
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Main Sidebar */}

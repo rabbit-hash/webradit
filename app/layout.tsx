@@ -55,7 +55,7 @@ export default function RootLayout({
         </div>
 
         <div className="lg:flex relative z-10 pointer-events-none">
-          <div className="fixed top-6 right-6 z-50 pointer-events-auto">
+          <div className="hidden lg:block fixed top-6 right-6 z-50 pointer-events-auto">
             <AnimatedThemeToggler />
           </div>
 
