@@ -14,7 +14,18 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Top Header */}
-      <div className="lg:hidden fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border p-4 flex items-center justify-end">
+      <div className="lg:hidden fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border p-4 flex items-center justify-between">
+        <div className="flex items-center">
+          <TextType
+            as="span"
+            className="font-mono text-accent font-bold whitespace-nowrap"
+            text={["Radith Akram"]}
+            typingSpeed={120}
+            showCursor={true}
+            cursorCharacter="|"
+            loop={false}
+          />
+        </div>
         <div className="flex items-center space-x-3">
           <AnimatedThemeToggler />
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
