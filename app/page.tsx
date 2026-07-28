@@ -10,9 +10,9 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section id="about" className="mb-24 scroll-mt-24 relative">
         {/* Lanyard Animation - Absolute positioned in the left margin */}
-        <div className="hidden xl:block absolute right-full -mr-[59px] -top-64 w-[500px] shrink-0 z-0 pointer-events-auto">
+        <div className="hidden xl:block absolute right-full -mr-[59px] -top-32 w-[500px] shrink-0 z-0 pointer-events-auto">
           <div className="sticky top-0">
-            <Lanyard position={[0, 1.0, 25]} gravity={[0, -40, 0]} transparent={true} />
+            <Lanyard position={[0, -0.6, 25]} gravity={[0, -40, 0]} transparent={true} />
           </div>
         </div>
 
