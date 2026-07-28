@@ -53,7 +53,7 @@ export default function Sidebar() {
             markerColor="var(--border)"
             showIndex={false}
             showMarker={true}
-            onItemClick={(index, label) => {
+            onItemClick={(index: number, label: string) => {
               const targetId = label.toLowerCase();
               const element = document.getElementById(targetId);
               if (element) {
