@@ -20,7 +20,8 @@ export const Terminal = ({ children, className, ...props }: React.HTMLAttributes
       const delay = currentDelay;
       
       if (isTyping) {
-        const text = typeof child.props.children === 'string' ? child.props.children : '';
+        const element = child as React.ReactElement<any>;
+        const text = typeof element.props.children === 'string' ? element.props.children : '';
         currentDelay += text.length * 40 + 500; 
       } else {
         currentDelay += 200; 
