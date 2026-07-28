@@ -6,7 +6,7 @@ import { Terminal, TypingAnimation, AnimatedSpan } from "@/registry/magicui/term
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
+    <div className="max-w-3xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
       {/* ABOUT SECTION */}
       <section id="about" className="mb-24 scroll-mt-24 relative">
         {/* Lanyard Animation - Absolute positioned in the left margin */}
