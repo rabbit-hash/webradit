@@ -14,13 +14,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Top Header */}
-      <div className="lg:hidden fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border p-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 rounded-full overflow-hidden border border-border relative">
-            <Image src="/profile.png" alt="Profile" fill className="object-cover" />
-          </div>
-          <span className="font-mono text-accent font-bold">Radith Akram</span>
-        </div>
+      <div className="lg:hidden fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border p-4 flex items-center justify-end">
         <div className="flex items-center space-x-3">
           <AnimatedThemeToggler />
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground">
