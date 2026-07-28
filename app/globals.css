@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-heading: var(--foreground-heading);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --foreground: #334155;
+    --foreground-heading: #0f172a;
+    --accent: #0284c7;
+    --border: #e2e8f0;
+    --card: #ffffff;
+  }
+
+  .dark {
+    --background: #050505;
+    --foreground: #a1a1aa;
+    --foreground-heading: #f4f4f5;
+    --accent: #00e5ff;
+    --border: #27272a;
+    --card: #09090b;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom utility for the blinking cursor effect */
+@layer utilities {
+  .cursor-block::after {
+    content: '';
+    display: inline-block;
+    width: 0.4em;
+    height: 1em;
+    background-color: var(--color-accent);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 1s step-start infinite;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* View Transitions for Theme Toggling */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
