@@ -9,15 +9,15 @@ export default function Home() {
     <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
       {/* ABOUT SECTION */}
       <section id="about" className="mb-24 scroll-mt-24 relative">
-        {/* Lanyard Animation - Absolute positioned in the left margin */}
-        <div className="hidden xl:block absolute right-full -mr-[59px] -top-32 w-[500px] shrink-0 z-0 pointer-events-auto">
+        {/* Lanyard Animation - Positioned behind the text to avoid sidebar clipping */}
+        <div className="hidden xl:block absolute left-[-150px] -top-32 w-[500px] shrink-0 z-0 pointer-events-auto">
           <div className="sticky top-0">
-            <Lanyard position={[0, -1.5, 30]} gravity={[0, -40, 0]} transparent={true} />
+            <Lanyard position={[0, 0, 22]} gravity={[0, -40, 0]} transparent={true} />
           </div>
         </div>
 
         <h2 className="text-base font-mono text-accent font-bold uppercase tracking-widest mb-6 relative z-10">About</h2>
-        <div className="text-foreground text-lg md:text-xl leading-relaxed space-y-6">
+        <div className="relative z-10 text-foreground text-lg md:text-xl leading-relaxed space-y-6 pointer-events-auto">
           <p>
             I am a full-stack engineer, currently studying Computer Science - Software Engineering at Binus University. 
             My work exists at the intersection of rigorous backend architecture and refined user experience.
