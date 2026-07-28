@@ -9,9 +9,9 @@ export default function Home() {
     <div className="max-w-3xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
       {/* ABOUT SECTION */}
       <section id="about" className="mb-24 scroll-mt-24 relative">
-        {/* Lanyard Animation - Absolute positioned in the left margin */}
-        <div className="hidden xl:block absolute right-full -mr-[120px] -top-64 w-[500px] shrink-0 z-0 pointer-events-auto">
-          <div className="sticky top-0">
+        {/* Lanyard Animation - Responsive */}
+        <div className="relative xl:absolute -mt-52 lg:-mt-64 xl:mt-0 xl:right-full xl:-mr-[120px] xl:-top-64 w-full xl:w-[500px] shrink-0 z-0 pointer-events-auto flex justify-center xl:block">
+          <div className="xl:sticky xl:top-0 w-full">
             <Lanyard position={[0, 1.8, 25]} gravity={[0, -40, 0]} transparent={true} />
           </div>
         </div>
