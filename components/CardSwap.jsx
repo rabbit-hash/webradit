@@ -72,6 +72,8 @@ const CardSwap = ({
   const intervalRef = useRef();
   const container = useRef(null);
 
+  const swapRef = useRef();
+
   useEffect(() => {
     const total = refs.length;
     refs.forEach((r, i) => placeNow(r.current, makeSlot(i, cardDistance, verticalDistance, total), skewAmount));
@@ -134,6 +136,8 @@ const CardSwap = ({
       });
     };
 
+    swapRef.current = swap;
+
     swap();
     intervalRef.current = window.setInterval(swap, delay);
 
@@ -159,6 +163,15 @@ const CardSwap = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 
+  const handleManualSwap = () => {
+    if (swapRef.current) {
+      swapRef.current();
+      // Reset the interval to prevent double swapping if auto-playing
+      clearInterval(intervalRef.current);
+      intervalRef.current = window.setInterval(swapRef.current, delay);
+    }
+  };
+
   const rendered = childArr.map((child, i) =>
     isValidElement(child)
       ? cloneElement(child, {
@@ -174,7 +187,7 @@ const CardSwap = ({
   );
 
   return (
-    <div ref={container} className="card-swap-container" style={{ width, height }}>
+    <div ref={container} className="card-swap-container" style={{ width, height, cursor: 'pointer' }} onClick={handleManualSwap}>
       {rendered}
     </div>
   );
