@@ -3,6 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 import Lanyard from "@/components/Lanyard";
 import Image from "next/image";
 import { Terminal, TypingAnimation, AnimatedSpan } from "@/registry/magicui/terminal";
+import CardSwap, { Card } from "@/components/CardSwap";
 
 export default function Home() {
   return (
@@ -37,40 +38,57 @@ export default function Home() {
         {/* TECH STACK */}
         <section id="tech-stack" className="mt-24 mb-24 scroll-mt-24">
           <h2 className="text-base font-mono text-accent font-bold uppercase tracking-widest mb-8">Tech Stack</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative h-[600px] w-full flex items-center justify-center">
             
-            <Terminal>
-              <TypingAnimation>&gt; pnpm install @stack/frontend</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Installing HTML5 & CSS3</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing JavaScript</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing TypeScript</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing React & Next.js</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Tailwind CSS</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Blade</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Frontend stack initialized.</TypingAnimation>
-            </Terminal>
+            <CardSwap
+              width={500}
+              height={400}
+              cardDistance={60}
+              verticalDistance={70}
+              delay={5000}
+              pauseOnHover={true}
+            >
+              <Card>
+                <Terminal>
+                  <TypingAnimation>&gt; pnpm install @stack/frontend</TypingAnimation>
+                  <AnimatedSpan className="text-accent">✔ Installing HTML5 & CSS3</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing JavaScript</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing TypeScript</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing React & Next.js</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing Tailwind CSS</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing Blade</AnimatedSpan>
+                  <TypingAnimation className="text-foreground/50 mt-2">Success! Frontend stack initialized.</TypingAnimation>
+                </Terminal>
+              </Card>
 
-            <Terminal>
-              <TypingAnimation>&gt; pnpm install @stack/backend</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Installing PHP</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Laravel</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Configuring REST APIs</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Backend stack initialized.</TypingAnimation>
-            </Terminal>
+              <Card>
+                <Terminal>
+                  <TypingAnimation>&gt; pnpm install @stack/backend</TypingAnimation>
+                  <AnimatedSpan className="text-accent">✔ Installing PHP</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Installing Laravel</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Configuring REST APIs</AnimatedSpan>
+                  <TypingAnimation className="text-foreground/50 mt-2">Success! Backend stack initialized.</TypingAnimation>
+                </Terminal>
+              </Card>
 
-            <Terminal>
-              <TypingAnimation>&gt; pnpm install @stack/database-cloud</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Connecting to MySQL</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Provisioning Vercel</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Database & Cloud ready.</TypingAnimation>
-            </Terminal>
+              <Card>
+                <Terminal>
+                  <TypingAnimation>&gt; pnpm install @stack/database-cloud</TypingAnimation>
+                  <AnimatedSpan className="text-accent">✔ Connecting to MySQL</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Provisioning Vercel</AnimatedSpan>
+                  <TypingAnimation className="text-foreground/50 mt-2">Success! Database & Cloud ready.</TypingAnimation>
+                </Terminal>
+              </Card>
 
-            <Terminal>
-              <TypingAnimation>&gt; pnpm install @stack/tools</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Configuring Git</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Connecting to GitHub</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Tools ready.</TypingAnimation>
-            </Terminal>
+              <Card>
+                <Terminal>
+                  <TypingAnimation>&gt; pnpm install @stack/tools</TypingAnimation>
+                  <AnimatedSpan className="text-accent">✔ Configuring Git</AnimatedSpan>
+                  <AnimatedSpan className="text-accent">✔ Connecting to GitHub</AnimatedSpan>
+                  <TypingAnimation className="text-foreground/50 mt-2">Success! Tools ready.</TypingAnimation>
+                </Terminal>
+              </Card>
+            </CardSwap>
 
           </div>
         </section>
