@@ -2,8 +2,7 @@ import ExperienceItem from "@/components/ExperienceItem";
 import ProjectCard from "@/components/ProjectCard";
 import Lanyard from "@/components/Lanyard";
 import Image from "next/image";
-import { Tree } from "@/components/ui/file-tree";
-import type { TreeViewElement } from "@/components/ui/file-tree";
+import { Terminal, TypingAnimation, AnimatedSpan } from "@/registry/magicui/terminal";
 
 export default function Home() {
   return (
@@ -38,81 +37,58 @@ export default function Home() {
         {/* TECH STACK */}
         <section id="tech-stack" className="mt-24 mb-24 scroll-mt-24">
           <h2 className="text-base font-mono text-accent font-bold uppercase tracking-widest mb-8">Tech Stack</h2>
-          <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-border bg-background/50 md:shadow-xl">
-            <Tree
-              className="p-4 bg-background/30 rounded-lg overflow-hidden"
-              initialSelectedId="1"
-              initialExpandedItems={["1", "2", "3", "4", "5", "6"]}
-              elements={[
-                {
-                  id: "1",
-                  isSelectable: true,
-                  name: "Tech Stack",
-                  children: [
-                    {
-                      id: "2",
-                      isSelectable: true,
-                      name: "Frontend",
-                      children: [
-                        { id: "2-1", isSelectable: true, name: "React.tsx" },
-                        { id: "2-2", isSelectable: true, name: "Next.js" },
-                        { id: "2-3", isSelectable: true, name: "Tailwind.css" },
-                        { id: "2-4", isSelectable: true, name: "TypeScript.ts" },
-                        { id: "2-5", isSelectable: true, name: "JavaScript.js" },
-                        { id: "2-6", isSelectable: true, name: "HTML_CSS" },
-                      ],
-                    },
-                    {
-                      id: "3",
-                      isSelectable: true,
-                      name: "Backend",
-                      children: [
-                        { id: "3-1", isSelectable: true, name: "Node.js" },
-                        { id: "3-2", isSelectable: true, name: "Laravel.php" },
-                        { id: "3-3", isSelectable: true, name: "Java.java" },
-                        { id: "3-4", isSelectable: true, name: "Express.js" },
-                        { id: "3-5", isSelectable: true, name: "PHP.php" },
-                      ],
-                    },
-                    {
-                      id: "4",
-                      isSelectable: true,
-                      name: "Database & Cloud",
-                      children: [
-                        { id: "4-1", isSelectable: true, name: "MySQL.sql" },
-                        { id: "4-2", isSelectable: true, name: "PostgreSQL.sql" },
-                        { id: "4-3", isSelectable: true, name: "Prisma.prisma" },
-                        { id: "4-4", isSelectable: true, name: "Firebase" },
-                        { id: "4-5", isSelectable: true, name: "AWS.config" },
-                        { id: "4-6", isSelectable: true, name: "Vercel.json" },
-                      ],
-                    },
-                    {
-                      id: "5",
-                      isSelectable: true,
-                      name: "Mobile",
-                      children: [
-                        { id: "5-1", isSelectable: true, name: "Flutter.dart" },
-                        { id: "5-2", isSelectable: true, name: "Dart.dart" },
-                        { id: "5-3", isSelectable: true, name: "AndroidSDK" },
-                      ],
-                    },
-                    {
-                      id: "6",
-                      isSelectable: true,
-                      name: "Tools",
-                      children: [
-                        { id: "6-1", isSelectable: true, name: "Git.gitignore" },
-                        { id: "6-2", isSelectable: true, name: "Docker.yml" },
-                        { id: "6-3", isSelectable: true, name: "Nginx.conf" },
-                        { id: "6-4", isSelectable: true, name: "Jest_Cypress.test" },
-                        { id: "6-5", isSelectable: true, name: "Figma_Jira" },
-                      ],
-                    },
-                  ],
-                },
-              ]}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <Terminal>
+              <TypingAnimation>&gt; pnpm install @stack/frontend</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Installing JavaScript</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing TypeScript</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing React</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Next.js</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Tailwind CSS</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing HTML5 & CSS3</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Frontend stack initialized.</TypingAnimation>
+            </Terminal>
+
+            <Terminal>
+              <TypingAnimation>&gt; pnpm install @stack/backend</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Installing Node.js</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Express</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing PHP</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Laravel</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Java</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Backend stack initialized.</TypingAnimation>
+            </Terminal>
+
+            <Terminal>
+              <TypingAnimation>&gt; pnpm install @stack/database-cloud</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Connecting to MySQL</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Connecting to PostgreSQL</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Setup Prisma ORM</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Setup Firebase</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Provisioning AWS</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Provisioning Vercel</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Database & Cloud ready.</TypingAnimation>
+            </Terminal>
+
+            <Terminal>
+              <TypingAnimation>&gt; pnpm install @stack/mobile</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Installing Flutter</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Dart</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Setup Android SDK</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Mobile stack initialized.</TypingAnimation>
+            </Terminal>
+
+            <Terminal className="md:col-span-2">
+              <TypingAnimation>&gt; pnpm install @stack/tools</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Configuring Git</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Starting Docker daemon</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Starting Nginx server</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Setup Jest & Cypress</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Integrating Figma & Jira</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Tools & Testing ready.</TypingAnimation>
+            </Terminal>
+
           </div>
         </section>
       </section>
