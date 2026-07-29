@@ -41,52 +41,35 @@ export default function Home() {
             
             <Terminal>
               <TypingAnimation>&gt; pnpm install @stack/frontend</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Installing HTML5 & CSS3</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Installing JavaScript</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Installing TypeScript</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing React</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Next.js</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing React & Next.js</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Installing Tailwind CSS</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing HTML5 & CSS3</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Installing Blade</AnimatedSpan>
               <TypingAnimation className="text-foreground/50 mt-2">Success! Frontend stack initialized.</TypingAnimation>
             </Terminal>
 
             <Terminal>
               <TypingAnimation>&gt; pnpm install @stack/backend</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Installing Node.js</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Express</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Installing PHP</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Installing Laravel</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Java</AnimatedSpan>
+              <AnimatedSpan className="text-accent">✔ Configuring REST APIs</AnimatedSpan>
               <TypingAnimation className="text-foreground/50 mt-2">Success! Backend stack initialized.</TypingAnimation>
             </Terminal>
 
             <Terminal>
               <TypingAnimation>&gt; pnpm install @stack/database-cloud</TypingAnimation>
               <AnimatedSpan className="text-accent">✔ Connecting to MySQL</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Connecting to PostgreSQL</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Setup Prisma ORM</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Setup Firebase</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Provisioning AWS</AnimatedSpan>
               <AnimatedSpan className="text-accent">✔ Provisioning Vercel</AnimatedSpan>
               <TypingAnimation className="text-foreground/50 mt-2">Success! Database & Cloud ready.</TypingAnimation>
             </Terminal>
 
             <Terminal>
-              <TypingAnimation>&gt; pnpm install @stack/mobile</TypingAnimation>
-              <AnimatedSpan className="text-accent">✔ Installing Flutter</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Installing Dart</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Setup Android SDK</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Mobile stack initialized.</TypingAnimation>
-            </Terminal>
-
-            <Terminal className="md:col-span-2">
               <TypingAnimation>&gt; pnpm install @stack/tools</TypingAnimation>
               <AnimatedSpan className="text-accent">✔ Configuring Git</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Starting Docker daemon</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Starting Nginx server</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Setup Jest & Cypress</AnimatedSpan>
-              <AnimatedSpan className="text-accent">✔ Integrating Figma & Jira</AnimatedSpan>
-              <TypingAnimation className="text-foreground/50 mt-2">Success! Tools & Testing ready.</TypingAnimation>
+              <AnimatedSpan className="text-accent">✔ Connecting to GitHub</AnimatedSpan>
+              <TypingAnimation className="text-foreground/50 mt-2">Success! Tools ready.</TypingAnimation>
             </Terminal>
 
           </div>
