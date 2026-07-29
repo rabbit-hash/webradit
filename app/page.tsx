@@ -12,7 +12,7 @@ export default function Home() {
         {/* Lanyard Animation - Responsive */}
         <div className="relative xl:absolute -mt-52 lg:-mt-64 xl:mt-0 xl:right-full xl:-mr-[120px] xl:-top-64 w-full xl:w-[500px] shrink-0 z-0 pointer-events-auto flex justify-center xl:block">
           <div className="xl:sticky xl:top-0 w-full">
-            <Lanyard position={[0, 1.8, 25]} gravity={[0, -40, 0]} transparent={true} />
+            <Lanyard position={[0, 1.8, 25]} gravity={[0, -40, 0]} transparent={true} frontImage="/profile.png" />
           </div>
         </div>
 
