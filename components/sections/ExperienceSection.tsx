@@ -1,4 +1,4 @@
-﻿import ExperienceItem from "@/components/ExperienceItem";
+import ExperienceItem from "@/components/ExperienceItem";
 import { experiences } from "@/data/experience";
 
 export default function ExperienceSection() {
@@ -14,6 +14,7 @@ export default function ExperienceSection() {
             date={exp.date}
             description={exp.description}
             certificate={exp.certificate}
+            documentation={(exp as any).documentation}
             isLatest={exp.isLatest}
           />
         ))}

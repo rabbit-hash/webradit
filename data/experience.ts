@@ -12,6 +12,7 @@ export const experiences = [
     date: "Jul 2026 — Aug 2026",
     description: "Lulus magang dengan predikat 'Sangat Baik' di Region Office PTPN IV Regional I Medan. Mengembangkan dan mengelola aplikasi web internal berskala enterprise (Safe SAPA, O1MS, SINERGI, Dashboard SDM) menggunakan Laravel, React, dan Tailwind CSS.",
     certificate: "/cert/magang-ptpn4.jpg",
+    documentation: "/experience/ptpn4-team.jpg",
     isLatest: false,
   }
 ];
