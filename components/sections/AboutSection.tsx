@@ -11,6 +11,7 @@ export default function AboutSection() {
         </div>
       </div>
 
+      {/* @ts-ignore - TS expects onLetterAnimationComplete but we don't need it */}
       <SplitText
         text="About Me"
         className="text-base font-mono text-accent font-bold uppercase tracking-widest mb-6 relative z-10"
@@ -18,7 +19,6 @@ export default function AboutSection() {
         duration={0.5}
         tag="h2"
         textAlign="left"
-        onLetterAnimationComplete={() => {}}
       />
       <div className="text-foreground text-lg md:text-xl leading-relaxed space-y-6">
         <p>

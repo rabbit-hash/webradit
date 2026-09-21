@@ -32,7 +32,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full bg-background text-foreground selection:bg-accent selection:text-background transition-colors duration-300">
+      <body suppressHydrationWarning className="min-h-full bg-background text-foreground selection:bg-accent selection:text-background transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
         <ClickSpark
           sparkColor="#00e5ff"
