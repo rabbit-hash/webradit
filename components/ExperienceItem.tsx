@@ -4,9 +4,10 @@ interface ExperienceItemProps {
   company: string;
   description: string;
   isLatest?: boolean;
+  certificate?: string;
 }
 
-export default function ExperienceItem({ title, date, company, description, isLatest }: ExperienceItemProps) {
+export default function ExperienceItem({ title, date, company, description, isLatest, certificate }: ExperienceItemProps) {
   return (
     <div className="relative pl-8 md:pl-0">
       <div className="md:grid md:grid-cols-4 md:gap-8 items-baseline">
@@ -33,6 +34,20 @@ export default function ExperienceItem({ title, date, company, description, isLa
           <p className="text-foreground leading-relaxed text-base/relaxed md:text-lg/relaxed">
             {description}
           </p>
+          
+          {certificate && (
+            <div className="mt-6">
+              <a 
+                href={certificate} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors bg-accent/10 px-4 py-2 rounded-full border border-accent/20"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                View Certificate
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>
