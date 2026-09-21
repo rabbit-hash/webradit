@@ -1,4 +1,4 @@
-﻿import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
@@ -17,7 +17,6 @@ export default function ProjectsSection() {
             link={project.link}
             highlights={project.highlights}
             images={project.images}
-            imageUrl={project.imageUrl}
           />
         ))}
       </div>

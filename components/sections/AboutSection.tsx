@@ -1,4 +1,4 @@
-﻿import Lanyard from "@/components/Lanyard";
+import Lanyard from "@/components/Lanyard";
 import SplitText from "@/components/SplitText";
 
 export default function AboutSection() {
@@ -18,6 +18,7 @@ export default function AboutSection() {
         duration={0.5}
         tag="h2"
         textAlign="left"
+        onLetterAnimationComplete={() => {}}
       />
       <div className="text-foreground text-lg md:text-xl leading-relaxed space-y-6">
         <p>
