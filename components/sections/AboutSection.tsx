@@ -22,7 +22,7 @@ export default function AboutSection() {
       />
       <div className="text-foreground text-lg md:text-xl leading-relaxed space-y-6">
         <p>
-          I am a full-stack engineer, currently studying Computer Science - Software Engineering at Binus University.
+          Hello! I'm <strong className="text-foreground">Radith Akram Ziyad Suin</strong>, a full-stack engineer currently studying Computer Science - Software Engineering at Binus University.
           My work exists at the intersection of rigorous backend architecture and refined user experience.
         </p>
         <p>
