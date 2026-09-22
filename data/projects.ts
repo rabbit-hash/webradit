@@ -1,5 +1,22 @@
 export const projects = [
   {
+    title: "Pempek Betigo",
+    description: "Website Company Profile & Landing Page untuk bisnis kuliner Pempek Betigo di JCity Medan Johor. Menampilkan profil, sejarah, visi misi perusahaan, serta panduan lokasi dengan antarmuka yang cepat dan interaktif.",
+    tags: ["Next.js", "React", "Tailwind", "Framer Motion"],
+    badge: "freelance",
+    role: "Full-stack Developer",
+    link: "https://pempekbetigo.vercel.app/",
+    highlights: [
+      "Performa optimal dengan Next.js 16.3.5 (Turbopack) dan Server-Side Rendering",
+      "Desain antarmuka modern dan responsif menggunakan Tailwind CSS v4",
+      "Animasi dinamis dan transisi mikro yang halus dengan Framer Motion",
+      "Informasi profil perusahaan, lokasi terintegrasi, dan kontak bisnis"
+    ],
+    images: [
+      { src: "/projects/pempek-betigo/logo.jpg", alt: "Pempek Betigo Logo" }
+    ]
+  },
+  {
     title: "Safe SAPA",
     description: "Sistem portal internal karyawan PTPN IV Regional I untuk pelaporan kendala operasional, masukan, feedback, dan perizinan secara real-time. Multi-role system dengan 3 level akses: Karyawan PKS, Tekpol, dan Admin.",
     tags: ["Laravel", "React", "MySQL", "Tailwind"],
