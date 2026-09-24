@@ -96,7 +96,7 @@ export default function Sidebar() {
           <Link href="https://instagram.com/radithakram" target="_blank" className="hover:text-accent transition-all duration-300 hover:scale-125">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16.11 7.66v.01"/><path d="M15.536 15.536a5 5 0 1 1-7.072-7.072 5 5 0 0 1 7.072 7.072z"/></svg>
           </Link>
-          <Link href="https://linkedin.com/in/radith-akram" target="_blank" className="hover:text-accent transition-all duration-300 hover:scale-125">
+          <Link href="https://www.linkedin.com/in/radith-a-365a17283" target="_blank" className="hover:text-accent transition-all duration-300 hover:scale-125">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
           </Link>
         </div>

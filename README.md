@@ -38,3 +38,21 @@ To run the project locally on your machine, follow these steps:
 **Radith Akram**
 - **Role:** Full-Stack Engineer
 - **Study:** Computer Science - Software Engineering, Binus University
+
+## 🌟 Mastered Skills (Based on Projects)
+
+**Frontend Development**
+- React.js / Next.js
+- Tailwind CSS
+- HTML / CSS / JavaScript
+- Alpine.js
+- Framer Motion
+- Chart.js
+
+**Backend Development**
+- Laravel
+- Node.js
+
+**Database**
+- MySQL
+- SQLite

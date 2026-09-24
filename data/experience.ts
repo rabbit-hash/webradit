@@ -2,7 +2,7 @@ export const experiences = [
   {
     title: "Computer Science - Software Engineering Student",
     company: "Bina Nusantara University",
-    date: "2023 — Present",
+    date: "Aug 2024 — Present",
     description: "Saat ini sedang menempuh pendidikan sarjana (S1) pada program studi Computer Science dengan spesialisasi Software Engineering. Aktif mempelajari arsitektur perangkat lunak, struktur data, dan pengembangan aplikasi modern.",
     isLatest: true,
   },
