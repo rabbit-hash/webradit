@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Radith Akram - Full-stack Engineer",
+  title: "Radith Akram",
   description: "Portfolio of Radith Akram, a Full-stack Engineer specializing in Laravel and React.",
 };
 
