@@ -1,24 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Sidebar from "@/components/Sidebar";
-import Particles from "@/components/Particles";
-import ClickSpark from "@/components/ClickSpark";
-import { AnimatedThemeToggler } from "@/registry/magicui/animated-theme-toggler";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import Navbar from "@/components/Navbar";
+
+const figtree = Figtree({
+  variable: "--font-geist-sans", // keeping the variable name to avoid breaking css that might use it
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const jetbrainsMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Radith Akram",
-  description: "Portfolio of Radith Akram, a Full-stack Engineer specializing in Laravel and React.",
+  title: "Radith Akram — Full-stack Engineer",
+  description: "Portfolio of Radith Akram, a Software Engineering student and Full-stack Engineer building modern web applications.",
 };
 
 export default function RootLayout({
@@ -30,46 +28,20 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${figtree.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body suppressHydrationWarning className="min-h-full bg-background text-foreground selection:bg-accent selection:text-background transition-colors duration-300">
+      <body suppressHydrationWarning className="min-h-full bg-background bg-noise text-foreground selection:bg-accent selection:text-background transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange={false}>
-        <ClickSpark
-          sparkColor="#00e5ff"
-          sparkSize={10}
-          sparkRadius={15}
-          sparkCount={8}
-          duration={400}
-        >
-          <div className="fixed inset-0 z-0">
-          <Particles
-            particleColors={["#ffffff", "#00e5ff"]}
-            particleCount={250}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={true}
-            alphaParticles={true}
-            disableRotation={false}
-          />
-        </div>
-
-        <div className="lg:flex relative z-10 pointer-events-none">
-          <div className="hidden lg:block fixed top-6 right-6 z-50 pointer-events-auto">
-            <AnimatedThemeToggler />
-          </div>
-
+        <div className="relative z-10 pointer-events-none">
           <div className="pointer-events-auto">
-            {/* Sidebar (Fixed on Desktop, Stacked on Mobile) */}
-            <Sidebar />
+            <Navbar />
           </div>
 
           {/* Main Content Area */}
-          <main className="flex-1 lg:ml-72 min-h-screen pb-24 lg:pb-0 pointer-events-auto">
+          <main className="min-h-screen pb-24 pointer-events-auto">
             {children}
           </main>
         </div>
-        </ClickSpark>
         </ThemeProvider>
       </body>
     </html>

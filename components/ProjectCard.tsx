@@ -3,23 +3,13 @@
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
-type BadgeType = "private" | "enterprise" | "open-source";
+import { Project, ProjectImage } from "@/models/types/Project";
 
-interface ProjectImage {
-  src: string;
-  alt: string;
-}
+type BadgeType = "private" | "enterprise" | "open-source" | string;
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tags: string[];
+export interface ProjectCardProps extends Omit<Project, "badge"> {
   imageUrl?: string;
-  images?: ProjectImage[];
-  link?: string;
   badge?: BadgeType;
-  role?: string;
-  highlights?: string[];
 }
 
 const badgeConfig: Record<BadgeType, { label: string; icon: string; className: string }> = {

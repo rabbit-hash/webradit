@@ -16,22 +16,29 @@
 
 @layer base {
   :root {
-    --background: #f8fafc;
-    --foreground: #334155;
+    --background: #fdfdfc;
+    --foreground: #475569;
     --foreground-heading: #0f172a;
-    --accent: #0284c7;
+    --accent: #5865F2; /* Discord Blurple */
     --border: #e2e8f0;
     --card: #ffffff;
   }
 
   .dark {
-    --background: #050505;
-    --foreground: #a1a1aa;
-    --foreground-heading: #f4f4f5;
-    --accent: #00e5ff;
-    --border: #27272a;
-    --card: #09090b;
+    --background: #313338; /* Discord dark background */
+    --foreground: #dbdee1; /* Discord text */
+    --foreground-heading: #ffffff; /* White headings */
+    --accent: #5865F2; /* Discord Blurple */
+    --border: #1e1f22; /* Discord border */
+    --card: #2b2d31; /* Discord secondary background */
   }
+}
+
+@layer utilities {
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
 }
 
 @layer base {

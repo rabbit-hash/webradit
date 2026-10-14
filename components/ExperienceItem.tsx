@@ -1,12 +1,6 @@
-interface ExperienceItemProps {
-  title: string;
-  date: string;
-  company: string;
-  description: string;
-  isLatest?: boolean;
-  certificate?: string;
-  documentation?: string;
-}
+import { Experience } from "@/models/types/Experience";
+
+export type ExperienceItemProps = Experience;
 
 export default function ExperienceItem({ title, date, company, description, isLatest, certificate, documentation }: ExperienceItemProps) {
   return (
